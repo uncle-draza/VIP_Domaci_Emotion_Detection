@@ -1,0 +1,1 @@
+Inicijalni commit, dodat readme fajl
