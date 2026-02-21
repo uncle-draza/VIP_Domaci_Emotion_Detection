@@ -1,0 +1,7 @@
+pandas
+matplotlib
+collections
+seaborn
+string
+wordcloud
+re
