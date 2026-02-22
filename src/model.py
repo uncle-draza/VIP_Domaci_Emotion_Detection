@@ -1,11 +1,11 @@
 import torch
 import torch.nn as nn
-from transformers import DistilBertModel
+from transformers import BertModel  
 
 class EmotionClassifier(nn.Module):
     def __init__(self, n_classes):
         super(EmotionClassifier, self).__init__()
-        self.bert = DistilBertModel.from_pretrained('distilbert-base-uncased')
+        self.bert = BertModel.from_pretrained('prajjwal1/bert-tiny')
         self.pre_classifier = nn.Linear(self.bert.config.hidden_size, self.bert.config.hidden_size)
         self.dropout = nn.Dropout(0.3)
         self.classifier = nn.Linear(self.bert.config.hidden_size, n_classes)

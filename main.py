@@ -23,11 +23,11 @@ data_path = 'data/emotions_cleaned.csv'
 df = pd.read_csv(data_path)
 
 #shuffle dataset
-df = df.sample(500, random_state=SEED).reset_index(drop=True)
+df = df.sample(13000, random_state=SEED).reset_index(drop=True)
 
 #hyperparameters
-BATCH_SIZE = 64
-MAX_LEN = 128
+BATCH_SIZE = 128
+MAX_LEN = 64
 EPOCHS = 3
 LR = 2e-5
 N_SPLITS = 5

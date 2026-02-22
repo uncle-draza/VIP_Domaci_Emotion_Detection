@@ -1,14 +1,14 @@
 import torch
 from torch.utils.data import Dataset, DataLoader
-from transformers import DistilBertTokenizer
+from transformers import AutoTokenizer
 from sklearn.model_selection import train_test_split
 
 class EmotionDataset(Dataset):
-    def __init__(self, texts, labels, max_len=128, model_name='distilbert-base-uncased'):
+    def __init__(self, texts, labels, max_len=128, model_name='prajjwal1/bert-tiny'):
         self.texts = texts
         self.labels = labels
         self.max_len = max_len
-        self.tokenizer = DistilBertTokenizer.from_pretrained(model_name)
+        self.tokenizer = AutoTokenizer.from_pretrained(model_name)
 
     def __len__(self):
         return len(self.texts)

@@ -75,7 +75,7 @@ def train_fold(model, train_loader, val_loader, device, epochs=3, lr=2e-5):
     return best_model_state
 
 
-def train_cross_validation(df, n_splits=5, batch_size=64, max_len=128, epochs=3, lr=2e-5, device='cpu'):
+def train_cross_validation(df, n_splits=5, batch_size=128, max_len=164, epochs=3, lr=2e-5, device='cpu'):
     skf = StratifiedKFold(n_splits=n_splits, shuffle=True, random_state=42)
 
     X = df['text'].tolist()

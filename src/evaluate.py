@@ -13,13 +13,13 @@ mlflow.set_tracking_uri("file:./mlruns")
 def evaluate_model(model_path, df, max_len=128, batch_size=64, device='cpu'):
     dataset = EmotionDataset(
         texts=df['text'].tolist(),
-        labels=df['labels'].tolist(),
+        labels=df['label'].tolist(),
         max_len=max_len
     )
     loader = DataLoader(dataset, batch_size=batch_size, shuffle=False)
 
     #ucitavanje modela
-    model = EmotionClassifier(n_classes=df['labels'].nunique()).to(device)
+    model = EmotionClassifier(n_classes=df['label'].nunique()).to(device)
     model.load_state_dict(torch.load(model_path, map_location=device))
     model.eval()
 
