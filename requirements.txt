@@ -5,3 +5,7 @@ seaborn
 string
 wordcloud
 re
+torch
+transformers
+sklearn
+mlflow
