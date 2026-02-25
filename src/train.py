@@ -140,7 +140,7 @@ def run_experiment(df, experiment_base_name, class_names, n_splits=3, epochs=3, 
     n_classes = len(class_names)
     print(f"Prepoznate klase ({n_classes}): {class_names}")
 
-    # dinamicko ime eksperimetna
+    # dinamicko ime eksperimenta
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     experiment_name = f"{experiment_base_name}_{timestamp}"
     print(f"Pokretanje eksperimenta: {experiment_name}")
