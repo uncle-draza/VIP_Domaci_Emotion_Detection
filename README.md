@@ -12,6 +12,7 @@ Proces funkcioniše na sledeći način:
 4.  Konačni rezultati (Accuracy, F1, Loss) predstavljaju **prosek** svih K iteracija.
 
 Random seed je hardcode-ovan na 69.
+Verzija Python-a je 3.12.0
 
 ## Instalacija i podešavanje
 
